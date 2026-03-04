@@ -12,7 +12,7 @@ function dpg_render_pj_clt()
     ob_start();
 ?>
     <div class="dpg-calculadora-wrapper dpg-calc-pj-clt">
-        <h3>Comparativo: CLT vs PJ - teste antonio</h3>
+        <h3>Comparativo: CLT vs PJ - teste matheus</h3>
         <p style="font-size: 14px; color: #777; margin-bottom: 20px;">
             <em>* Simulação estimada e simplificada. Não substitui uma análise contábil comercial.</em>
         </p>
