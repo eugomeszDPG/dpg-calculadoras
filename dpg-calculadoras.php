@@ -3,7 +3,7 @@
  * Plugin Name: DPG Calculadoras
  * Plugin URI:  https://grupodpg.com.br
  * Description: Framework profissional para calculadoras adicionadas via shortcodes.
- * Version:     1.1.0
+ * Version:     1.2.0
  * Author:      Grupo DPG
  * Author URI:  https://grupodpg.com.br
  * Text Domain: dpg-calculadoras
