@@ -3,7 +3,7 @@
  * Plugin Name: DPG Calculadoras
  * Plugin URI:  https://grupodpg.com.br
  * Description: Framework profissional para calculadoras adicionadas via shortcodes.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Grupo DPG
  * Author URI:  https://grupodpg.com.br
  * Text Domain: dpg-calculadoras
@@ -112,3 +112,13 @@ function dpg_calculadora_exemplo_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('dpg_calculadora_exemplo', 'dpg_calculadora_exemplo_shortcode');
+
+require_once __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$updateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/eugomeszDPG/dpg-calculadoras',
+    __FILE__,
+    'dpg-calculadoras'
+);
