@@ -1,0 +1,169 @@
+/*
+ * DPG Calculadoras - Estilos Globais Frente de Loja (Front-end)
+ * Fontes externas (Poppins)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Container geral da calculadora */
+.dpg-calculadora-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Sombra Suave */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tipografia Base Interna */
+.dpg-calculadora-wrapper h3 {
+    margin-top: 0;
+    color: #2c3338;
+    font-size: 24px;
+    font-weight: 600;
+    /* Semibold */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Espaçamentos de Inputs */
+.dpg-form-group {
+    margin-bottom: 20px;
+}
+
+.dpg-calculadora-wrapper label {
+    color: #444;
+    font-size: 15px;
+    font-weight: 400;
+    /* Regular */
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Campos de formulário - Alinhamento Uniforme */
+.dpg-calculadora-wrapper input[type="text"],
+.dpg-calculadora-wrapper input[type="number"],
+.dpg-calculadora-wrapper input[type="email"],
+.dpg-calculadora-wrapper input[type="password"],
+.dpg-calculadora-wrapper select,
+.dpg-calculadora-wrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dpg-calculadora-wrapper input:focus,
+.dpg-calculadora-wrapper select:focus,
+.dpg-calculadora-wrapper textarea:focus {
+    border-color: #4FC608;
+    box-shadow: 0 0 0 2px rgba(79, 198, 8, 0.1);
+}
+
+/* Container de Botões Lado a Lado */
+.dpg-form-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Botões Globais */
+.dpg-calculadora-wrapper button,
+.dpg-calculadora-wrapper input[type="button"],
+.dpg-calculadora-wrapper input[type="submit"] {
+    flex: 1;
+    /* Divide o espaço uniformemente */
+    box-sizing: border-box;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 30px;
+    /* Bem arredondado */
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Botão Ação Principal (Verde) - Usamos os IDs específicos com o prefixo calc para forçar a cor primária contra secundária */
+.dpg-calculadora-wrapper button[id$="-calcular"] {
+    background-color: #4FC608;
+    color: #ffffff;
+}
+
+.dpg-calculadora-wrapper button[id$="-calcular"]:hover {
+    background-color: #42a906;
+    /* Hover levemente escuro */
+}
+
+/* Botão Secundário (Limpar/Ação Secundária) */
+.dpg-calculadora-wrapper button[id$="-limpar"] {
+    background-color: #f1f1f1 !important;
+    /* Force override no inline css do PHP e herança nativa caso exista */
+    color: #333333 !important;
+}
+
+.dpg-calculadora-wrapper button[id$="-limpar"]:hover {
+    background-color: #e2e2e2 !important;
+}
+
+.dpg-calculadora-wrapper button:active {
+    transform: scale(0.98);
+}
+
+/* Área de Resultado */
+.dpg-calculadora-wrapper div[id$="-resultado-box"] {
+    margin-top: 40px !important;
+    padding: 30px !important;
+    border: transparent !important;
+    border-radius: 12px !important;
+    background-color: #f9fdf7 !important;
+    /* Verde muito claro ao invés de azul */
+    box-shadow: inset 0 0 0 1px #e3eedf;
+    /* Borda visual bem sutil usando box-shadow */
+}
+
+.dpg-calculadora-wrapper div[id$="-resultado-box"] h4 {
+    margin: 0 0 20px 0 !important;
+    color: #4FC608 !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dpg-calculadora-wrapper div[id$="-resultado-box"] p strong {
+    font-size: 26px !important;
+    /* Tipografia maior para valores finais */
+    color: #2c3338 !important;
+}
+
+.dpg-calculadora-wrapper div[id$="-resultado-box"] p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsividade Mobile - Fallback botões */
+@media screen and (max-width: 600px) {
+    .dpg-calculadora-wrapper {
+        padding: 25px 15px;
+    }
+
+    .dpg-form-actions {
+        flex-direction: column;
+    }
+
+    .dpg-form-actions button {
+        width: 100%;
+    }
+}
